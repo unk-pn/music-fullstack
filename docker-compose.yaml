@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  backend:
+    build: ./music-backend
+    container_name: music-backend
+    ports:
+      - "5500:5500"
+    volumes:
+      - ./music-backend:/app
+    environment:
+      - MONGODB_LINK=your_mongodb_link
+
+  frontend:
+    build: ./music-frontend
+    container_name: music-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./music-frontend:/app
+    depends_on:
+      - backend
