@@ -1,0 +1,50 @@
+{
+  "name": "music-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mantine/core": "^8.1.2",
+    "@mantine/hooks": "^8.0.1",
+    "@mantinex/mantine-logo": "^2.0.0",
+    "@material-ui/core": "5.0.0-alpha.24",
+    "@material-ui/icons": "4.11.2",
+    "@mui/icons-material": "7.1.0",
+    "@mui/material": "7.1.0",
+    "@mui/styled-engine-sc": "7.1.0",
+    "@tabler/icons-react": "^3.33.0",
+    "framer-motion": "^12.12.1",
+    "next": "15.3.2",
+    "next-redux-wrapper": "8.1.0",
+    "postcss": "^8.5.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-dropzone": "^14.3.8",
+    "react-icons": "^5.5.0",
+    "react-redux": "9.2.0",
+    "recoil": "^0.7.7",
+    "redux": "5.0.1",
+    "redux-thunk": "3.1.0",
+    "sass": "^1.89.0",
+    "scss": "^0.2.4",
+    "styled-components": "6.1.18"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5"
+  }
+}

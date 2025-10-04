@@ -1,0 +1,143 @@
+.track {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 24px;
+  border: none;
+  box-shadow: none !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.track:hover {
+  background: rgba(200, 180, 255, 0.1) !important;
+}
+
+.active {
+  background: rgba(170, 156, 255, 0.15) !important;
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.track_name {
+  color: #fff;
+  font-family: Kanit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artist {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Kanit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time {
+  margin-right: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Kanit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  flex-shrink: 0;
+}
+
+.track_info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+@media (max-width: 1024px) {
+  .track {
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .track_name {
+    font-size: 18px;
+  }
+
+  .artist {
+    font-size: 14px;
+  }
+
+  .time {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .track {
+    padding: 6px;
+    border-radius: 16px;
+    margin-right: 0;
+  }
+
+  .track_name {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 13px;
+  }
+
+  .time {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .image {
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .track {
+    padding: 5px;
+    border-radius: 12px;
+    margin-right: 0;
+    gap: 8px;
+  }
+
+  .track_name {
+    font-size: 14px;
+  }
+
+  .artist {
+    font-size: 12px;
+  }
+
+  .time {
+    font-size: 14px;
+    margin-right: 6px;
+  }
+
+  .image {
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+  }
+}

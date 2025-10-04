@@ -1,0 +1,585 @@
+.grad1 {
+  z-index: 0;
+  position: absolute;
+  width: 490.219px;
+  height: 490.219px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 490.219px;
+  background: linear-gradient(180deg, #2603fb 0%, #dc06ff 100%);
+  filter: blur(250px);
+
+  top: -150px;
+}
+
+.grad2 {
+  z-index: 0;
+  position: absolute;
+  width: 239.659px;
+  height: 239.659px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #ff30a2 0%, #06fff0 100%);
+  filter: blur(100px);
+
+  top: 250px;
+  right: 350px;
+}
+
+.grad3 {
+  z-index: 0;
+  position: absolute;
+  width: 518.54px;
+  height: 518.54px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 518.54px;
+  background: linear-gradient(180deg, #2603fb 0%, #dc06ff 100%);
+  filter: blur(250px);
+
+  top: 250px;
+  right: 50px;
+}
+
+.grad4 {
+  z-index: 0;
+  position: absolute;
+  width: 367.176px;
+  height: 367.176px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 367.176px;
+  background: linear-gradient(180deg, #ff008c 0%, #00ffef 100%);
+  filter: blur(185px);
+
+  bottom: 150px;
+  left: 20px;
+}
+
+.track_info,
+.info_wrapper,
+.track_image,
+.track_name,
+.artist,
+.lyrics_section {
+  position: relative; /* 👈 обязательно */
+  z-index: 1;
+}
+
+.listen {
+  width: 100%;
+}
+
+.main_wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.track_info {
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 46px 55px 55px;
+}
+
+.back_btn {
+  max-width: 300px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.info_wrapper {
+  z-index: 1;
+  position: relative;
+  margin-left: 43px;
+}
+
+.track_image {
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+  max-width: 274px;
+}
+
+.track_name {
+  color: #d0aefb;
+  font-family: Kurale;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.artist {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Kanit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.lyrics_section {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 22px;
+}
+
+.lyrics_toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 22px 44px 0;
+  transition: color 0.2s ease;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.show_hide {
+  color: #d0aefb;
+  font-family: Kanit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.lyrics_content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.lyrics_content.open {
+  opacity: 1;
+}
+
+.lyrics_text {
+  color: #fff;
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  padding: 0 20px 20px;
+}
+
+.lyrics_content pre {
+  white-space: pre-wrap;
+  color: #ddd;
+}
+
+.comments_title {
+  margin: 10px 0;
+  color: #d0aefb;
+  font-family: Kurale;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.comments_section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.comments {
+  /* max-width: 700px; */
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.55);
+  flex: 6;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  margin: 20px;
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 21px;
+  background: rgba(170, 156, 255, 0.15);
+}
+
+.comment_author {
+  color: #d0aefb;
+  font-family: Kurale;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.comment_text {
+  color: #fff;
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.comment_text pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.comments_form {
+  flex: 2;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.username_wrapper {
+  border-radius: 13px;
+}
+
+.username::placeholder {
+  color: rgba(208, 174, 251, 0.1);
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.send_btn_wrapper {
+  display: block;
+  width: 100%;
+}
+
+.send_btn {
+  padding: 12px 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0 0 0;
+  border-radius: 51.5px;
+  background: #6718cd;
+  width: 100%;
+  min-height: 48px;
+
+  color: #fff;
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.send_btn:hover {
+  background-color: #5a15b8;
+}
+
+.send_btn:active {
+  background-color: #4d1299;
+}
+
+.comments_empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: rgba(208, 174, 251, 0.6);
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+@media (max-width: 1150px) {
+  .comments_section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .comments_form {
+    order: -1;
+    flex: none;
+    width: 100%;
+  }
+
+  .comments {
+    order: 1;
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main_wrapper {
+    max-width: 900px;
+    padding: 0 40px;
+  }
+
+  .track_info {
+    padding: 35px 40px 40px;
+  }
+
+  .info_wrapper {
+    margin-left: 30px;
+  }
+
+  .track_name {
+    font-size: 48px;
+  }
+
+  .artist {
+    font-size: 28px;
+  }
+
+  .grad1 {
+    width: 400px;
+    height: 400px;
+    top: -120px;
+  }
+
+  .grad2 {
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    right: 280px;
+  }
+
+  .grad3 {
+    width: 420px;
+    height: 420px;
+    top: 200px;
+    right: 40px;
+  }
+
+  .grad4 {
+    width: 300px;
+    height: 300px;
+    bottom: 120px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_wrapper {
+    padding: 0 20px;
+  }
+
+  .track_info {
+    padding: 25px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    border-radius: 20px;
+  }
+
+  .info_wrapper {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .listen {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .track_name {
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .artist {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .lyrics_section {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 16px;
+  }
+
+  .lyrics_title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .lyrics_content {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .comments_section {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 16px;
+  }
+
+  .comments_title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .grad1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+  }
+
+  .grad2 {
+    width: 150px;
+    height: 150px;
+    top: 150px;
+    right: 200px;
+  }
+
+  .grad3 {
+    width: 320px;
+    height: 320px;
+    top: 150px;
+    right: 30px;
+  }
+
+  .grad4 {
+    width: 250px;
+    height: 250px;
+    bottom: 100px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_wrapper {
+    padding: 0 15px;
+  }
+
+  .track_info {
+    padding: 20px 15px 25px;
+    border-radius: 16px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .listen {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .track_name {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .artist {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .lyrics_section,
+  .comments_section {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+  }
+
+  .lyrics_title,
+  .comments_title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .lyrics_content {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .send_btn {
+    font-size: 20px;
+    min-height: 40px;
+    border-radius: 20px;
+  }
+
+  .comments_empty {
+    font-size: 16px;
+    padding: 30px 15px;
+  }
+
+  .grad1 {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+  }
+
+  .grad2 {
+    width: 120px;
+    height: 120px;
+    top: 120px;
+    right: 150px;
+  }
+
+  .grad3 {
+    width: 260px;
+    height: 260px;
+    top: 120px;
+    right: 20px;
+  }
+
+  .grad4 {
+    width: 200px;
+    height: 200px;
+    bottom: 80px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .track_name {
+    font-size: 24px;
+  }
+
+  .artist {
+    font-size: 18px;
+  }
+
+  .listen {
+    width: 90%;
+  }
+}

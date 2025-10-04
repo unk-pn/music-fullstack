@@ -1,0 +1,43 @@
+.btn {
+  padding: 10px 50px;
+  border-radius: 33px;
+  border: 3px solid rgba(208, 174, 251, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background: rgba(208, 174, 251, 0.1);
+}
+
+.btn_item {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-family: Kanit;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 40px;
+    border-radius: 28px;
+  }
+
+  .btn_item {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 6px 30px;
+    border-radius: 24px;
+  }
+
+  .btn_item {
+    font-size: 18px;
+  }
+}

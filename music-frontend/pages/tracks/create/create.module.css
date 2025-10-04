@@ -1,0 +1,519 @@
+.grad1 {
+  z-index: 0;
+  position: absolute;
+  width: 490.219px;
+  height: 490.219px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 490.219px;
+  background: linear-gradient(180deg, #2603fb 0%, #dc06ff 100%);
+  filter: blur(250px);
+
+  top: -150px;
+}
+
+.grad2 {
+  z-index: 0;
+  position: absolute;
+  width: 239.659px;
+  height: 239.659px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #ff30a2 0%, #06fff0 100%);
+  filter: blur(100px);
+
+  top: 250px;
+  right: 350px;
+}
+
+.grad3 {
+  z-index: 0;
+  position: absolute;
+  width: 518.54px;
+  height: 518.54px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 518.54px;
+  background: linear-gradient(180deg, #2603fb 0%, #dc06ff 100%);
+  filter: blur(250px);
+
+  top: 250px;
+  right: 50px;
+}
+
+.grad4 {
+  z-index: 0;
+  position: absolute;
+  width: 367.176px;
+  height: 367.176px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 367.176px;
+  background: linear-gradient(180deg, #ff008c 0%, #00ffef 100%);
+  filter: blur(185px);
+
+  bottom: 150px;
+  left: 20px;
+}
+
+.step_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
+.pic_step {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.pic_upload_area {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.pic_upload_area:hover {
+  opacity: 0.8;
+}
+
+.pic_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.pic_wrapper:hover {
+  opacity: 0.8;
+}
+
+.pic_preview {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  background-color: rgba(120, 120, 120, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.pic_placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.pic_icon {
+  font-size: 48px;
+  opacity: 0.7;
+}
+
+.pic_info {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -200px;
+}
+
+.pic_filename {
+  color: #fff;
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  word-wrap: break-word;
+}
+
+.file_name_txt {
+  color: #d0aefb;
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pic_img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.pic_span {
+  color: #c3c3c3;
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.pic_previewName {
+  text-align: center;
+  color: #c3c3c3;
+  font-size: 14px;
+}
+
+.audio_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  min-height: 200px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.audio_wrapper:hover {
+  opacity: 0.8;
+}
+
+.audio_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.audio_player {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Новые стили для аудио шага */
+.audio_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
+  min-height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.audio_upload_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.upload_button_wrapper {
+  cursor: pointer;
+}
+
+.upload_button {
+  padding: 12px 40px;
+  background: #6718cd;
+  border: none;
+  border-radius: 51.5px;
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload_button:hover {
+  background-color: #5a15b8;
+}
+
+.upload_button:active {
+  background-color: #4d1299;
+}
+
+.audio_upload_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.audio_no_file_text {
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.audio_uploaded {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.audio_filename {
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  padding-top: 30px;
+  margin-top: auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.buttons_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.button_wrapper {
+  flex: 1;
+  max-width: 200px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .pic_preview {
+    width: 250px;
+  }
+
+  .pic_step {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .audio_step {
+    padding: 20px;
+    min-height: 250px;
+  }
+
+  .upload_button {
+    padding: 10px 30px;
+    font-size: 20px;
+  }
+
+  .audio_no_file_text,
+  .audio_filename {
+    font-size: 18px;
+  }
+
+  .step_content {
+    min-height: 300px;
+  }
+
+  .pic_wrapper,
+  .audio_wrapper {
+    padding: 15px;
+  }
+
+  .audio_player {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pic_preview {
+    width: 200px;
+  }
+
+  .pic_step {
+    padding: 10px;
+  }
+
+  .audio_step {
+    padding: 15px;
+    min-height: 200px;
+  }
+
+  .upload_button {
+    padding: 8px 25px;
+    font-size: 18px;
+  }
+
+  .audio_no_file_text,
+  .audio_filename {
+    font-size: 16px;
+  }
+
+  .audio_player {
+    max-width: 250px;
+  }
+
+  .pic_wrapper,
+  .audio_wrapper {
+    padding: 10px;
+  }
+
+  .pic_filename {
+    font-size: 16px;
+  }
+}
+
+/* Убеждаемся, что формы на переднем плане */
+.step_content > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .grad1 {
+    width: 400px;
+    height: 400px;
+    top: -120px;
+  }
+
+  .grad2 {
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    right: 280px;
+  }
+
+  .grad3 {
+    width: 420px;
+    height: 420px;
+    top: 200px;
+    right: 40px;
+  }
+
+  .grad4 {
+    width: 300px;
+    height: 300px;
+    bottom: 120px;
+    left: 15px;
+  }
+
+  .pic_step {
+    gap: 30px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grad1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+  }
+
+  .grad2 {
+    width: 150px;
+    height: 150px;
+    top: 150px;
+    right: 200px;
+  }
+
+  .grad3 {
+    width: 320px;
+    height: 320px;
+    top: 150px;
+    right: 30px;
+  }
+
+  .grad4 {
+    width: 250px;
+    height: 250px;
+    bottom: 100px;
+    left: 10px;
+  }
+
+  .pic_step {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .step_content {
+    min-height: 300px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grad1 {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+  }
+
+  .grad2 {
+    width: 120px;
+    height: 120px;
+    top: 120px;
+    right: 150px;
+  }
+
+  .grad3 {
+    width: 260px;
+    height: 260px;
+    top: 120px;
+    right: 20px;
+  }
+
+  .grad4 {
+    width: 200px;
+    height: 200px;
+    bottom: 80px;
+    left: 5px;
+  }
+
+  .pic_step {
+    gap: 15px;
+    padding: 8px;
+  }
+
+  .step_content {
+    min-height: 250px;
+    padding: 0 15px;
+  }
+
+  .pic_wrapper,
+  .audio_wrapper {
+    padding: 8px;
+  }
+}

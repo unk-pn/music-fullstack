@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kurale&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  box-shadow: none;
+}
+
+html,
+body {
+  background: #100d1a !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Kanit", "Kurale", Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  html,
+  body {
+    font-size: 11px;
+  }
+}

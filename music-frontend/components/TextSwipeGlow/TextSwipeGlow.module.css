@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+.btn,
+.hover_text,
+.btn:hover .hover_text {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+
+.btn {
+  position: relative;
+  border: 0;
+  outline: none;
+  background: none;
+  color: var(--mantine-color-dark-3);
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.hover_text {
+  position: absolute;
+  content: "";
+  width: 0%;
+  color: #fff;
+  inset: 0;
+  overflow: hidden;
+  border-right: 6px solid #fff;
+  transition: width 0.4s ease;
+}
+
+.btn:hover .hover_text {
+  width: 100%;
+  filter: drop-shadow(0 0 20px #fff);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .hover_text {
+    border-right-width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .hover_text {
+    border-right-width: 3px;
+  }
+}

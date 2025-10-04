@@ -1,0 +1,301 @@
+/* .bg {
+  background: #221244;
+  min-height: 100vh;
+} */
+
+.grad1 {
+  z-index: 0;
+  position: absolute;
+  width: 490.219px;
+  height: 490.219px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 490.219px;
+  background: linear-gradient(180deg, #2603fb 0%, #dc06ff 100%);
+  filter: blur(250px);
+
+  top: -150px;
+}
+
+.grad2 {
+  z-index: 0;
+  position: absolute;
+  width: 239.659px;
+  height: 239.659px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #ff30a2 0%, #06fff0 100%);
+  filter: blur(100px);
+
+  top: 250px;
+  right: 350px;
+}
+
+.grad3 {
+  z-index: 0;
+  position: absolute;
+  width: 518.54px;
+  height: 518.54px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 518.54px;
+  background: linear-gradient(180deg, #2603fb 0%, #dc06ff 100%);
+  filter: blur(250px);
+
+  top: 250px;
+  right: 50px;
+}
+
+.grad4 {
+  z-index: 0;
+  position: absolute;
+  width: 367.176px;
+  height: 367.176px;
+  transform: rotate(-22.538deg);
+  flex-shrink: 0;
+  border-radius: 367.176px;
+  background: linear-gradient(180deg, #ff008c 0%, #00ffef 100%);
+  filter: blur(185px);
+
+  bottom: 150px;
+  left: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px;
+  align-items: center;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.center {
+  max-width: 800px;
+}
+
+.title {
+  color: #d0aefb !important;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+  font-family: Kurale;
+}
+
+.subtitle {
+  color: #d0aefb;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+  font-family: Kurale;
+}
+
+.text {
+  color: #fff;
+  font-family: Kanit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 35px;
+}
+
+.list {
+  padding-left: 30px;
+  text-align: left;
+}
+
+.links {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.links a {
+  aspect-ratio: 1 / 1;
+  width: 48px;
+  padding-right: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.designer {
+  color: #d0aefb;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    margin-left: 80px;
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .subtitle {
+    font-size: 40px;
+  }
+
+  .text {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .grad1 {
+    width: 400px;
+    height: 400px;
+    top: -120px;
+  }
+
+  .grad2 {
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    right: 280px;
+  }
+
+  .grad3 {
+    width: 420px;
+    height: 420px;
+    top: 200px;
+    right: 40px;
+  }
+
+  .grad4 {
+    width: 300px;
+    height: 300px;
+    bottom: 120px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .center {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .list {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .grad1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+  }
+
+  .grad2 {
+    width: 150px;
+    height: 150px;
+    top: 150px;
+    right: 200px;
+  }
+
+  .grad3 {
+    width: 320px;
+    height: 320px;
+    top: 150px;
+    right: 30px;
+  }
+
+  .grad4 {
+    width: 250px;
+    height: 250px;
+    bottom: 100px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .links a {
+    width: 40px;
+  }
+
+  .grad1 {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+  }
+
+  .grad2 {
+    width: 120px;
+    height: 120px;
+    top: 120px;
+    right: 150px;
+  }
+
+  .grad3 {
+    width: 260px;
+    height: 260px;
+    top: 120px;
+    right: 20px;
+  }
+
+  .grad4 {
+    width: 200px;
+    height: 200px;
+    bottom: 80px;
+    left: 5px;
+  }
+}

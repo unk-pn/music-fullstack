@@ -1,0 +1,173 @@
+.player {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 75px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid rgba(208, 174, 251, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.trackInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  margin: 0 15px;
+}
+
+.title {
+  color: #fff;
+  font-family: Kanit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Kanit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1024px) {
+  .player {
+    padding: 0 50px;
+    height: 65px;
+  }
+
+  .trackInfo {
+    min-width: 100px;
+    margin: 0 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .artist {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player {
+    padding: 0 20px;
+    height: 60px;
+    gap: 8px;
+  }
+
+  .trackInfo {
+    min-width: 80px;
+    margin: 0 8px;
+    flex: 1;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .player {
+    padding: 0 15px;
+    height: 55px;
+    gap: 6px;
+  }
+
+  .trackInfo {
+    min-width: 60px;
+    margin: 0 6px;
+    flex: 1;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .artist {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .player {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .trackInfo {
+    min-width: 80px;
+    max-width: 140px;
+    margin: 0 6px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .artist {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .player {
+    padding: 0 10px;
+    height: 50px;
+    gap: 4px;
+  }
+
+  .trackInfo {
+    min-width: 60px;
+    max-width: 120px;
+    margin: 0 4px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .artist {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .player {
+    padding: 0 8px;
+    height: 48px;
+    gap: 3px;
+  }
+
+  .trackInfo {
+    min-width: 50px;
+    max-width: 100px;
+    margin: 0 3px;
+  }
+
+  .title {
+    font-size: 11px;
+  }
+
+  .artist {
+    font-size: 9px;
+  }
+}

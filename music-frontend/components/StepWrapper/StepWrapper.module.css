@@ -1,0 +1,139 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+.stepper {
+  background: transparent !important;
+  padding: 24px 0 !important;
+}
+
+.stepIconCompleted {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #d0aefb !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: "Kanit" !important;
+  font-weight: 400 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.stepIconActive {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #d0aefb !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: "Kanit" !important;
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.stepIconDefault {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #d0aefb !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: "Kanit" !important;
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .stepper {
+    padding: 16px 0 !important;
+  }
+
+  .stepIconCompleted,
+  .stepIconActive,
+  .stepIconDefault {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stepIconCompleted,
+  .stepIconActive,
+  .stepIconDefault {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 12px !important;
+  }
+}
+
+.card {
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  max-width: 1200px;
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 900px;
+  }
+
+  .card {
+    max-width: 900px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .stepper {
+    padding: 12px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .card {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .stepper {
+    padding: 8px 0 !important;
+  }
+}

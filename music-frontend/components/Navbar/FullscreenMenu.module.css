@@ -1,0 +1,146 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #100d1a;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.closeButton {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.menu {
+  position: absolute;
+  left: 50px;
+  top: 122px;
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.menuLink {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+}
+
+.menuLink:hover {
+  color: #d0aefb;
+}
+
+.menuLink.active {
+  color: #d0aefb;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+  .closeButton {
+    top: 40px;
+    right: 40px;
+  }
+
+  .menu {
+    left: 40px;
+    top: 110px;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .closeButton {
+    top: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .closeIcon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .menu {
+    left: 30px;
+    top: 100px;
+  }
+
+  .menuLinks {
+    gap: 40px;
+  }
+
+  .menuLink {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .closeButton {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .closeIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .menu {
+    left: 20px;
+    top: 80px;
+  }
+
+  .menuLinks {
+    gap: 35px;
+  }
+
+  .menuLink {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,25 @@
+.wrapper {
+  height: 285px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    height: 180px;
+  }
+}
+
+/* .img_wrapper {
+    width: 275;
+    height: 275;
+    background-color: #808080;
+} */
