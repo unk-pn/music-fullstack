@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
-import { IconButton, Grid } from '@mui/material';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import PauseIcon from '@mui/icons-material/Pause';
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
-import ProgressBar from '../ProgressBar/ProgressBar';
-import { usePlayer } from '../../hooks/usePlayer';
-import styles from './Player.module.css';
-import { BACKEND_URL } from '../../backends';
+import { IconButton, Grid } from "@mui/material";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import ProgressBar from "../ProgressBar/ProgressBar";
+import { usePlayer } from "../../hooks/usePlayer";
+import styles from "./Player.module.css";
+import { BACKEND_URL } from "../../backends";
 
 let audio: HTMLAudioElement;
 
 const Player = () => {
-  const [player, { play, pause, setVolume, setCurrentTime, setDuration }] = usePlayer();
+  const [player, { play, pause, setVolume, setCurrentTime, setDuration }] =
+    usePlayer();
   const { pause: isPaused, volume, active, duration, currentTime } = player;
 
   useEffect(() => {
@@ -19,15 +20,16 @@ const Player = () => {
       audio = new Audio();
     }
     if (active) {
-      audio.src = BACKEND_URL + '/' + active.audio;
+      audio.src = BACKEND_URL + "/" + active.audio;
       audio.volume = volume / 100;
       audio.currentTime = currentTime;
       audio.onloadedmetadata = () => {
         setDuration(Math.ceil(audio.duration));
-        // audio.play();
+        if (!isPaused) {
+          audio.play();
+        }
       };
       audio.ontimeupdate = () => setCurrentTime(Math.ceil(audio.currentTime));
-      // play();
     }
   }, [active]);
 
@@ -67,7 +69,7 @@ const Player = () => {
   const formatTime = (sec: number) => {
     const m = Math.floor(sec / 60);
     const s = sec % 60;
-    return `${m}:${String(s).padStart(2, '0')}`;
+    return `${m}:${String(s).padStart(2, "0")}`;
   };
 
   return (
@@ -75,7 +77,11 @@ const Player = () => {
       <IconButton onClick={togglePlay}>
         {isPaused ? <PlayArrowIcon /> : <PauseIcon />}
       </IconButton>
-      <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}>
+      <Grid
+        container
+        direction="column"
+        style={{ width: 200, margin: "0 20px" }}
+      >
         <div className={styles.title}>{active.name}</div>
         <div className={styles.artist}>{active.artist}</div>
       </Grid>
@@ -86,7 +92,7 @@ const Player = () => {
         duration={formatTime(duration)}
         onChange={changeCurrentTime}
       />
-      <VolumeUpIcon style={{ marginLeft: 'auto' }} />
+      <VolumeUpIcon style={{ marginLeft: "auto" }} />
       <ProgressBar
         left={volume}
         rigth={100}
