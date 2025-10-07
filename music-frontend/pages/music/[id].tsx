@@ -94,7 +94,7 @@ const TrackPage: React.FC<TrackPageProps> = ({ serverTrack }) => {
       <div className={c.main_wrapper}>
         <div className={c.track_info}>
           <Button
-            onClick={() => router.push("/tracks")}
+            onClick={() => router.push("/music")}
             str={"Back to tracks"}
             className={c.back_btn}
           />
@@ -293,11 +293,30 @@ const TrackPage: React.FC<TrackPageProps> = ({ serverTrack }) => {
 export default TrackPage;
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const response = await fetch(BACKEND_URL + "/tracks/" + params?.id);
-  const data = await response.json();
-  return {
-    props: {
-      serverTrack: data,
-    },
-  };
+  try {
+    const response = await fetch(BACKEND_URL + "/tracks/" + params?.id);
+
+    if (!response.ok) {
+      return {
+        redirect: {
+          destination: "/music",
+          permanent: false,
+        },
+      };
+    }
+
+    const data = await response.json();
+    return {
+      props: {
+        serverTrack: data,
+      },
+    };
+  } catch {
+    return {
+      redirect: {
+        destination: "/music",
+        permanent: false,
+      },
+    };
+  }
 };

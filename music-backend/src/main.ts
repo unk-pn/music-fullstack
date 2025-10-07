@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { json, urlencoded } from 'express';
+import { json, urlencoded, raw } from 'express';
 
 const start = async () => {
   try {
@@ -9,6 +9,7 @@ const start = async () => {
     app.enableCors();
     app.use(json({ limit: '50mb' }));
     app.use(urlencoded({ limit: '50mb', extended: true }));
+    app.use(raw({ limit: '50mb' }));
     await app.listen(PORT, () => {
       console.log(`running on port ${PORT}`);
     });

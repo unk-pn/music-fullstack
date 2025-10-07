@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import {
   Drawer,
   AppBar,
@@ -8,22 +8,22 @@ import {
   ListItemIcon,
   ListItemText,
   ListItemButton,
-} from '@mui/material';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import { TextSwipeGlow } from '../TextSwipeGlow/TextSwipeGlow';
-import { styled } from '@mui/material/styles';
+} from "@mui/material";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import { TextSwipeGlow } from "../TextSwipeGlow/TextSwipeGlow";
+import { styled } from "@mui/material/styles";
 
 const menuItems = [
-  { text: 'Home page', href: '/' },
-  { text: 'Tracks', href: '/tracks' },
-  { text: 'Information', href: '/info' },
+  { text: "Home page", href: "/" },
+  { text: "Tracks", href: "/music" },
+  { text: "Information", href: "/info" },
 ];
 
 const CustomAppBar = styled(AppBar)({
-  backgroundColor: '#0d1b2a',
+  backgroundColor: "#0d1b2a",
 });
 
 export default function Navbar() {
@@ -31,16 +31,16 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <div style={{ position: 'absolute' }}>
+    <div style={{ position: "absolute" }}>
       <CustomAppBar position="fixed">
         <Toolbar>
           <div color="inherit" onClick={() => setOpen(true)}>
-            <TextSwipeGlow text={'Menu'} />
+            <TextSwipeGlow text={"Menu"} />
           </div>
         </Toolbar>
       </CustomAppBar>
       <Drawer variant="persistent" anchor="left" open={open}>
-        <button onClick={() => setOpen(false)} style={{ padding: '3px 0' }}>
+        <button onClick={() => setOpen(false)} style={{ padding: "3px 0" }}>
           <ChevronLeftIcon />
         </button>
         <List>

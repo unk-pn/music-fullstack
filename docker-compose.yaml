@@ -8,8 +8,7 @@ services:
     volumes:
       - ./music-backend:/app
     environment:
-      - MONGODB_LINK=your_mongodb_link
-
+      - MONGODB_LINK=
   frontend:
     build: ./music-frontend
     container_name: music-frontend

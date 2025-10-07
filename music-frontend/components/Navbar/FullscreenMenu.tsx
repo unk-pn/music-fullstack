@@ -9,7 +9,7 @@ interface FullscreenMenuProps {
 
 const menuItems = [
   { text: "Home", href: "/" },
-  { text: "Tracks", href: "/tracks" },
+  { text: "Tracks", href: "/music" },
   { text: "Information", href: "/info" },
 ];
 

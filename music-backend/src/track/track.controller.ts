@@ -8,6 +8,7 @@ import {
   Query,
   UploadedFiles,
   UseInterceptors,
+  BadRequestException,
 } from '@nestjs/common';
 import { TrackService } from './track.service';
 import { CreateTrackDto } from './dto/create-track.dto';
@@ -20,10 +21,17 @@ export class TrackController {
   constructor(private trackService: TrackService) {}
   @Post()
   @UseInterceptors(
-    FileFieldsInterceptor([
-      { name: 'picture', maxCount: 1 },
-      { name: 'audio', maxCount: 1 },
-    ]),
+    FileFieldsInterceptor(
+      [
+        { name: 'picture', maxCount: 1 },
+        { name: 'audio', maxCount: 1 },
+      ],
+      {
+        limits: {
+          fileSize: 50 * 1024 * 1024, // 50MB
+        },
+      },
+    ),
   )
   create(
     @UploadedFiles()
@@ -45,12 +53,18 @@ export class TrackController {
     return this.trackService.search(query);
   }
   @Get(':id')
-  getOne(@Param('id') id: Types.ObjectId) {
-    return this.trackService.getOne(id);
+  getOne(@Param('id') id: string) {
+    if (!Types.ObjectId.isValid(id)) {
+      throw new BadRequestException('Invalid track ID format');
+    }
+    return this.trackService.getOne(new Types.ObjectId(id));
   }
   @Delete(':id')
-  delete(@Param('id') id: Types.ObjectId) {
-    return this.trackService.delete(id);
+  delete(@Param('id') id: string) {
+    if (!Types.ObjectId.isValid(id)) {
+      throw new BadRequestException('Invalid track ID format');
+    }
+    return this.trackService.delete(new Types.ObjectId(id));
   }
   @Delete('/comments/:id')
   deleteComment(@Param('id') id: string) {
@@ -61,7 +75,10 @@ export class TrackController {
     return this.trackService.addComment(dto);
   }
   @Post('/listen')
-  listen(@Param('id') id: Types.ObjectId) {
-    return this.trackService.listen(id);
+  listen(@Body('id') id: string) {
+    if (!Types.ObjectId.isValid(id)) {
+      throw new BadRequestException('Invalid track ID format');
+    }
+    return this.trackService.listen(new Types.ObjectId(id));
   }
 }

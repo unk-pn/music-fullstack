@@ -62,7 +62,7 @@ const CreateTrack = () => {
       })
         .then((res) => {
           if (!res.ok) throw new Error("Upload failed");
-          router.push("/tracks");
+          router.push("/music");
         })
         .catch((e) => console.log(e));
     }
@@ -70,7 +70,7 @@ const CreateTrack = () => {
 
   const back = () => {
     if (activeStep === 0) {
-      router.push("/tracks");
+      router.push("/music");
     } else {
       setActiveStep((prev) => prev - 1);
     }

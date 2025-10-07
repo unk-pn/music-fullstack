@@ -69,7 +69,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
   return (
     <Card
       className={`${c.track} ${isCurrent ? c.active : ""}`}
-      onClick={() => router.push("/tracks/" + track._id)}
+      onClick={() => router.push("/music/" + track._id)}
       style={{
         borderRadius: 24,
         backgroundColor: "transparent",

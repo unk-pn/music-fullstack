@@ -24,8 +24,10 @@ const TracksPage = () => {
         if (!cancelled) setLoading(false);
       }
     })();
-    
-    return () => { cancelled = true }
+
+    return () => {
+      cancelled = true;
+    };
   }, [query]); // если добавить fetchTracks в массив зависимостей, то будет вечная загрузка
 
   const search = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +35,9 @@ const TracksPage = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{ backgroundColor: "#1a1a1a", minHeight: "100vh", color: "white" }}
+    >
       <MainLayout title="Tracks">
         <div className={c.grad1}></div>
         <div className={c.grad2}></div>
@@ -55,7 +59,10 @@ const TracksPage = () => {
             >
               <h1 className={c.title}>Tracks</h1>
 
-              <Button onClick={() => router.push("/tracks/create")} str="Upload +" />
+              <Button
+                onClick={() => router.push("/music/create")}
+                str="Upload +"
+              />
             </Box>
             <div style={{ margin: "0 40px" }}>
               <h2 className={c.search_text}>Search by name</h2>

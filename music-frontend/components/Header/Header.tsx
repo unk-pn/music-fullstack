@@ -14,7 +14,7 @@ export const Header = () => {
             <Link href="/" className={classes.navLink}>
               Home
             </Link>
-            <Link href="/tracks" className={classes.navLink}>
+            <Link href="/music" className={classes.navLink}>
               Tracks
             </Link>
             <Link href="/info" className={classes.navLink}>
